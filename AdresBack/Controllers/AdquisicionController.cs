@@ -32,8 +32,8 @@ namespace AdresBack.Controllers
 
             try
             {
-                Lista = _dbcontext.Adquisiciones.ToList();
-                return StatusCode(StatusCodes.Status200OK, new { mensaje = "OK", response = Lista });
+                
+                return StatusCode(StatusCodes.Status200OK, _dbcontext.Adquisiciones.ToList() );
             }
             catch (Exception ex)
             {

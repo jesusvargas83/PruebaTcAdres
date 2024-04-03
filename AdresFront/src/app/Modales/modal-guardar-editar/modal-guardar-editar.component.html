@@ -1,0 +1,70 @@
+<h2 mat-dialog-title>{{tituloAccion}} Adquisición</h2>
+<mat-dialog-content>
+    <form [formGroup]="formAdquisicion">
+        <mat-grid-list cols="2" rowHeight="2:1">
+            <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                    <mat-label>Presupuesto</mat-label>
+                    <input matInput formControlName="presupuesto" autocomplete="off">
+                  </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                    <mat-label>Unidad</mat-label>
+                    <input matInput formControlName="unidad" autocomplete="off">
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                    <mat-label>Bien o Servicio</mat-label>
+                    <input matInput formControlName="bienServicio" autocomplete="off">
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                    <mat-label>Cantidad</mat-label>
+                    <input matInput formControlName="cantidad" autocomplete="off">
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                    <mat-label>Valor unitario</mat-label>
+                    <input matInput formControlName="valorUnitario" autocomplete="off">
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                    <mat-label>Valor Total</mat-label>
+                    <input matInput formControlName="valorTotal" autocomplete="off">
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                    <mat-label>Fecha de Adquisición</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="fecha">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                    <mat-label>Entidad</mat-label>
+                    <input matInput formControlName="proveedor" autocomplete="off">
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                    <mat-label>Documentación</mat-label>
+                    <input matInput formControlName="documentacion" autocomplete="off">
+                </mat-form-field>
+            </mat-grid-tile>
+          </mat-grid-list>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-raised-button mat-dialog-close color="warn">Cerrar</button>
+  <button mat-raised-button color="primary"
+  (click)="guardarEditarAdquisicion()"
+  [disabled]="formAdquisicion.invalid"
+  >{{botonAccion}}</button>
+</mat-dialog-actions>

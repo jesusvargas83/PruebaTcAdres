@@ -1,0 +1,11 @@
+<h2 mat-dialog-title>Eliminar Adquisición</h2>
+<mat-dialog-content>
+¿Está seguro de Eliminar esta adquisición?
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-raised-button mat-dialog-close color="warn">Cerrar</button>
+  <button mat-raised-button color="primary"
+  (click)="confirmarEliminacion()"
+  cdkFocusInitial
+  >Eliminar</button>
+</mat-dialog-actions>
