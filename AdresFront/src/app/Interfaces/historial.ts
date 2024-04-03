@@ -1,7 +1,10 @@
 export interface Historial {
-    Id:number,
-    IdAdquisicion:number,
-    Tipo:string,
-    Descripcion:string,
-    Fecha:string
+    mensaje:string,
+    response:[{
+        id:number,
+        idAdquisicion:number,
+        tipo:string,
+        fecha:Date,
+        descripcion:string
+    }]
 }

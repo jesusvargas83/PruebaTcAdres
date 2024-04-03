@@ -22,8 +22,8 @@ export class AdquisicionService {
     return this.http.get<Adquisicion[]>(`${this.apiUrl}lista`);
   }
 
-  getHistorial():Observable<Historial[]>{
-    return this.http.get<Historial[]>(`${this.apiUrl}historial`);
+  getHistorial():Observable<Historial>{
+    return this.http.get<Historial>(`${this.apiUrl}historial`);
   }
 
   add(modelo:Adquisicion):Observable<Adquisicion[]>{

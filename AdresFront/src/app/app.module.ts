@@ -20,10 +20,11 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { ModalGuardarEditarComponent } from './Modales/modal-guardar-editar/modal-guardar-editar.component';
-import { ModalEliminarComponent } from './Modales/modal-eliminar/modal-eliminar.component';
-import { FooterComponent } from './Components/footer/footer.component';
-import { HeaderComponent } from './Components/header/header.component';
+import { ModalGuardarEditarComponent } from './Components/layout/Pages/modal-guardar-editar/modal-guardar-editar.component';
+import { ModalEliminarComponent } from './Components/layout/Pages/modal-eliminar/modal-eliminar.component';
+import { LayoutComponent } from './Components/layout/layout.component';
+import { AppRoutingModule } from './app-routing.module';
+import { SharedModule } from './Reutilizable/shared/shared.module';
 
 
 @NgModule({
@@ -31,8 +32,7 @@ import { HeaderComponent } from './Components/header/header.component';
     AppComponent,
     ModalGuardarEditarComponent,
     ModalEliminarComponent,
-    FooterComponent,
-    HeaderComponent
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +51,9 @@ import { HeaderComponent } from './Components/header/header.component';
     MatSnackBarModule,
     MatIconModule,
     MatDialogModule,
-    MatGridListModule
+    MatGridListModule,
+    AppRoutingModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
